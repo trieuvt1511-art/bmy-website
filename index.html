@@ -3,232 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="B'My - Specialty Banh Mi & Coffee. Sabor real, esencia de Vietnam. Abriendo Mayo 1, 2026 en Madrid.">
     <title>B'My - Bánh Mì & Cà Phê | Madrid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Afacad:wght@400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Afacad:wght@400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="vi">VI</button>
-    </div>
-
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo-wrapper">
-                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" fill="#ee3124"/>
-                    <text x="50" y="65" font-size="60" font-weight="bold" text-anchor="middle" fill="white" font-family="Oswald">B</text>
-                </svg>
+            <div class="logo-container">
+                <img src="assets/logo-red.svg" alt="B'My Logo" class="logo">
                 <span class="brand-name">B'My</span>
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
-                <li><a href="menu.html" class="nav-link" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
-                <li><a href="story.html" class="nav-link" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
-                <li><a href="gallery.html" class="nav-link" data-es="Galería" data-en="Gallery" data-vi="Thư viện">Galería</a></li>
-                <li><a href="contact.html" class="nav-link" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Historia</a></li>
+                <li><a href="#menu" class="nav-link">Menú</a></li>
+                <li><a href="#gallery" class="nav-link">Galería</a></li>
+                <li><a href="#location" class="nav-link">Ubicación</a></li>
             </ul>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="vi">VI</button>
+            </div>
         </div>
     </nav>
 
-    <!-- Mascot Corner -->
-    <div class="mascot-container mascot-home">
-        <div class="mascot-character">🍞</div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <img src="assets/photos/banhmi-hero.jpg" alt="B'My Banh Mi Hero" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <img src="assets/logo-white.svg" alt="B'My Logo White" class="hero-logo">
+            <h1 class="hero-title">B'My</h1>
+            <p class="hero-tagline">Sabor real, esencia de Vietnam</p>
+
+            <div class="countdown-container">
+                <p class="countdown-label">Abrimos en</p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">45</span>
+                        <span class="countdown-label-small">días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">12</span>
+                        <span class="countdown-label-small">horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">30</span>
+                        <span class="countdown-label-small">minutos</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <button class="btn btn-primary">Reservar Mesa</button>
+                <a href="#menu" class="btn btn-secondary">Ver Menú</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vietnamese Stripe Divider 1 -->
+    <div class="stripe-divider stripe-1">
+        <div class="stripe stripe-red"></div>
+        <div class="stripe stripe-yellow"></div>
+        <div class="stripe stripe-blue"></div>
+        <div class="stripe stripe-green"></div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title" data-es="¡Bienvenido a B'My!" data-en="Welcome to B'My!" data-vi="Chào mừng đến B'My!">¡Bienvenido a B'My!</h1>
-                <p class="tagline" data-es="Sabor real, esencia de Vietnam" data-en="Real flavor, essence of Vietnam" data-vi="Hương vị thật, tinh hoa Việt Nam">Sabor real, esencia de Vietnam</p>
-                <p class="hero-subtitle" data-es="Abre 1 de Mayo, 2026" data-en="Opens May 1, 2026" data-vi="Khai trương 1 tháng 5, 2026">Abre 1 de Mayo, 2026</p>
-
-                <!-- Countdown Timer -->
-                <div class="countdown-timer">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="days">0</span>
-                        <span class="countdown-label" data-es="Días" data-en="Days" data-vi="Ngày">Días</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">0</span>
-                        <span class="countdown-label" data-es="Horas" data-en="Hours" data-vi="Giờ">Horas</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">0</span>
-                        <span class="countdown-label" data-es="Minutos" data-en="Minutes" data-vi="Phút">Minutos</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="seconds">0</span>
-                        <span class="countdown-label" data-es="Segundos" data-en="Seconds" data-vi="Giây">Segundos</span>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Nuestra Historia</h2>
+                    <p class="about-description">
+                        B'My nace de la pasión por la autenticidad. Cada bánh mì es una celebración de sabores vietnamitas
+                        tradicionales, preparado con ingredientes frescos seleccionados con cuidado. Nuestra misión es traer
+                        la esencia de Vietnam a Madrid, compartiendo el arte del street food vietnamita con la comunidad global.
+                    </p>
+                    <p class="about-description">
+                        Autenticidad, descubrimiento y salud: estos son nuestros pilares. Desde nuestro cà phê Vietnam hasta
+                        nuestros bánh mì especiales, cada producto refleja nuestro compromiso con la excelencia y la tradición.
+                    </p>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <h3 class="value-title">Autenticidad</h3>
+                            <p class="value-desc">Recetas tradicionales vietnamitas</p>
+                        </div>
+                        <div class="value-card">
+                            <h3 class="value-title">Descubrimiento</h3>
+                            <p class="value-desc">Nuevos sabores en cada visita</p>
+                        </div>
+                        <div class="value-card">
+                            <h3 class="value-title">Salud</h3>
+                            <p class="value-desc">Ingredientes frescos y naturales</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="cta-buttons">
-                    <a href="#reserve" class="btn btn-primary" data-es="Reservar Ahora" data-en="Reserve Now" data-vi="Đặt bàn ngay">Reservar Ahora</a>
-                    <a href="menu.html" class="btn btn-secondary" data-es="Ver Menú" data-en="View Menu" data-vi="Xem Thực đơn">Ver Menú</a>
+                <div class="about-visual">
+                    <img src="assets/mascot-bread.png" alt="B'My Mascot - Bread" class="about-mascot">
                 </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-image">🥖</div>
             </div>
         </div>
-        <div class="street-pattern"></div>
     </section>
 
-    <!-- Brand Highlights Section -->
-    <section class="highlights">
-        <h2 class="section-title" data-es="¿Por qué B'My?" data-en="Why B'My?" data-vi="Tại sao B'My?">¿Por qué B'My?</h2>
+    <!-- Vietnamese Stripe Divider 2 -->
+    <div class="stripe-divider stripe-2">
+        <div class="stripe stripe-green"></div>
+        <div class="stripe stripe-red"></div>
+        <div class="stripe stripe-yellow"></div>
+        <div class="stripe stripe-blue"></div>
+    </div>
 
-        <div class="values-grid">
-            <div class="value-card authenticity">
-                <div class="value-icon">🌿</div>
-                <h3 data-es="Autenticidad" data-en="Authenticity" data-vi="Nguyên bản">Autenticidad</h3>
-                <p data-es="Recetas tradicionales vietnamitas, preparadas con ingredientes frescos y naturales. Cada bocado cuenta una historia." data-en="Traditional Vietnamese recipes, prepared with fresh and natural ingredients. Every bite tells a story." data-vi="Công thức truyền thống Việt Nam, được chuẩn bị với những nguyên liệu tươi và tự nhiên.">Recetas tradicionales vietnamitas, preparadas con ingredientes frescos y naturales. Cada bocado cuenta una historia.</p>
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Nuestro Menú</h2>
+
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="banhmi">Bánh Mì</button>
+                <button class="menu-tab" data-category="coffee">Cà Phê</button>
+                <button class="menu-tab" data-category="drinks">Bebidas</button>
             </div>
-            <div class="value-card discovery">
-                <div class="value-icon">🔍</div>
-                <h3 data-es="Khám phá" data-en="Discovery" data-vi="Discovery">Khám phá</h3>
-                <p data-es="Explora sabores únicos y combinaciones innovadoras que desafían lo convencional. ¡Sorprende tu paladar!" data-en="Explore unique flavors and innovative combinations that challenge the conventional. Surprise your palate!" data-vi="Khám phá những hương vị độc đáo và sự kết hợp sáng tạo. Làm ngạc nhiên vị giác của bạn!">Explora sabores únicos y combinaciones innovadoras que desafían lo convencional. ¡Sorprende tu paladar!</p>
-            </div>
-            <div class="value-card healthy">
-                <div class="value-icon">💪</div>
-                <h3 data-es="Saludable" data-en="Healthy" data-vi="Lành mạnh">Saludable</h3>
-                <p data-es="Opciones nutritivas y equilibradas. Somos transparentes con lo que comes, porque tu salud es nuestra prioridad." data-en="Nutritious and balanced options. We're transparent about what you eat, because your health is our priority." data-vi="Những lựa chọn dinh dưỡng và cân bằng. Chúng tôi minh bạch về những gì bạn ăn.">Opciones nutritivas y equilibradas. Somos transparentes con lo que comes, porque tu salud es nuestra prioridad.</p>
+
+            <div class="menu-content">
+                <!-- Bánh Mì Items -->
+                <div class="menu-category active" data-category="banhmi">
+                    <div class="menu-items-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">B'My Clásico</h3>
+                                <span class="menu-item-price">€6.50</span>
+                            </div>
+                            <p class="menu-item-desc">Thịt nguội truyền thống</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">B'My Lemongrass Chicken</h3>
+                                <span class="menu-item-price">€7.00</span>
+                            </div>
+                            <p class="menu-item-desc">Gà sả ớt</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">B'My Grilled Pork</h3>
+                                <span class="menu-item-price">€7.50</span>
+                            </div>
+                            <p class="menu-item-desc">Thịt nướng</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">B'My Tofu & Mushroom</h3>
+                                <span class="menu-item-price">€6.50</span>
+                            </div>
+                            <p class="menu-item-desc">Đậu hũ nấm</p>
+                        </div>
+                        <div class="menu-item special">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">B'My Special Combo</h3>
+                                <span class="menu-item-price">€9.90</span>
+                            </div>
+                            <p class="menu-item-desc">Bánh mì + Cà phê</p>
+                            <span class="special-badge">Especial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cà Phê Items -->
+                <div class="menu-category" data-category="coffee">
+                    <div class="menu-items-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Cà Phê Sữa Đá</h3>
+                                <span class="menu-item-price">€3.50</span>
+                            </div>
+                            <p class="menu-item-desc">Café con leche condensada helado</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Cà Phê Đen Đá</h3>
+                                <span class="menu-item-price">€3.00</span>
+                            </div>
+                            <p class="menu-item-desc">Café negro helado</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Bạc Xỉu</h3>
+                                <span class="menu-item-price">€3.50</span>
+                            </div>
+                            <p class="menu-item-desc">Café con mucha leche</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Cà Phê Trứng</h3>
+                                <span class="menu-item-price">€4.50</span>
+                            </div>
+                            <p class="menu-item-desc">Café con huevo cremoso</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Cà Phê Dừa</h3>
+                                <span class="menu-item-price">€4.00</span>
+                            </div>
+                            <p class="menu-item-desc">Café con leche de coco</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drinks Items -->
+                <div class="menu-category" data-category="drinks">
+                    <div class="menu-items-grid">
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Trà Đào Cam Sả</h3>
+                                <span class="menu-item-price">€4.00</span>
+                            </div>
+                            <p class="menu-item-desc">Té de durazno, naranja y limoncillo</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Sinh Tố Bơ</h3>
+                                <span class="menu-item-price">€4.50</span>
+                            </div>
+                            <p class="menu-item-desc">Batido de aguacate</p>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-name">Nước Chanh Đá</h3>
+                                <span class="menu-item-price">€3.00</span>
+                            </div>
+                            <p class="menu-item-desc">Agua fresca de limón</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="street-pattern"></div>
     </section>
 
-    <!-- Featured Products Teaser -->
-    <section class="featured-products">
-        <h2 class="section-title" data-es="Nuestros Favoritos" data-en="Our Favorites" data-vi="Những điều yêu thích của chúng tôi">Nuestros Favoritos</h2>
+    <!-- Vietnamese Stripe Divider 3 -->
+    <div class="stripe-divider stripe-3">
+        <div class="stripe stripe-blue"></div>
+        <div class="stripe stripe-green"></div>
+        <div class="stripe stripe-red"></div>
+        <div class="stripe stripe-yellow"></div>
+    </div>
 
-        <div class="products-showcase">
-            <div class="product-card featured-product">
-                <div class="product-image">🥖</div>
-                <div class="product-info">
-                    <h3>Bánh Mì Xíu Mại</h3>
-                    <p class="product-desc" data-es="Clásico vietnamita con jamón, paté y verduras frescas" data-en="Vietnamese classic with ham, pâté and fresh vegetables" data-vi="Bánh mì cổ điển Việt Nam với giăm bông, pâté và rau tươi">Clásico vietnamita con jamón, paté y verduras frescas</p>
-                    <span class="price">€6.90</span>
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Nuestra Galería</h2>
+            <p class="section-subtitle">Visita el sabor de Vietnam en Madrid</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/photos/banhmi-closeup.jpg" alt="B'My Banh Mi Close-up">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Bánh Mì Fresco</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="product-card featured-product">
-                <div class="product-image">☕</div>
-                <div class="product-info">
-                    <h3>Cà Phê Sài Gòn</h3>
-                    <p class="product-desc" data-es="Espresso vietnamita con leche condensada. Perfecto y cremoso." data-en="Vietnamese espresso with condensed milk. Perfect and creamy." data-vi="Cà phê espresso Việt Nam với sữa đặc. Hoàn hảo và kem.">Espresso vietnamita con leche condensada. Perfecto y cremoso.</p>
-                    <span class="price">€4.50</span>
+                <div class="gallery-item">
+                    <img src="assets/photos/banhmi-wood.jpg" alt="B'My Banh Mi on Wood">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Artesanal</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="product-card featured-product">
-                <div class="product-image">🍵</div>
-                <div class="product-info">
-                    <h3>Matcha Latte</h3>
-                    <p class="product-desc" data-es="Matcha Premium con leche espumada. Suave y energético." data-en="Premium matcha with frothed milk. Smooth and energizing." data-vi="Matcha Premium với sữa tạo bọt. Mịn và tràn năng lượng.">Matcha Premium con leche espumada. Suave y energético.</p>
-                    <span class="price">€5.50</span>
+                <div class="gallery-item">
+                    <img src="assets/photos/bmy-store.jpg" alt="B'My Store">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Nuestra Tienda</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/bmy-packaging.jpg" alt="B'My Packaging">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Empaque Especial</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/caphe-watercolor.jpg" alt="Vietnamese Coffee">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Cà Phê Vietnam</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/photos/banhmi-illustration.jpg" alt="Banh Mi Illustration">
+                    <div class="gallery-overlay">
+                        <p class="gallery-text">Cada Momento</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="explore-button">
-            <a href="menu.html" class="btn btn-large" data-es="Explorar Menú Completo" data-en="Explore Full Menu" data-vi="Khám phá Thực đơn Đầy đủ">Explorar Menú Completo</a>
-        </div>
-        <div class="street-pattern"></div>
     </section>
 
-    <!-- Lead Capture Section -->
-    <section class="lead-capture" id="reserve">
-        <div class="capture-wrapper">
-            <div class="capture-content">
-                <h2 data-es="¡Sé el Primero!" data-en="Be the First!" data-vi="Hãy là người đầu tiên!">¡Sé el Primero!</h2>
-                <p data-es="Únete a nuestro círculo exclusivo y recibe un Bánh Mì GRATIS en tu primera visita" data-en="Join our exclusive circle and get a FREE Bánh Mì on your first visit" data-vi="Tham gia vòng tròn độc quyền của chúng tôi và nhận một Bánh Mì MIỄN PHÍ ở lần ghé thăm đầu tiên">Únete a nuestro círculo exclusivo y recibe un Bánh Mì GRATIS en tu primera visita</p>
+    <!-- Vietnamese Stripe Divider 4 -->
+    <div class="stripe-divider stripe-4">
+        <div class="stripe stripe-yellow"></div>
+        <div class="stripe stripe-blue"></div>
+        <div class="stripe stripe-green"></div>
+        <div class="stripe stripe-red"></div>
+    </div>
 
-                <form class="lead-form" id="leadForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Tu Nombre" data-placeholder-es="Tu Nombre" data-placeholder-en="Your Name" data-placeholder-vi="Tên của bạn" required>
+    <!-- Location & Hours Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">Encuéntranos</h2>
+
+            <div class="location-content">
+                <div class="location-info">
+                    <div class="info-card">
+                        <h3 class="info-title">Dirección</h3>
+                        <p class="info-text">C/Preguntoiro 29</p>
+                        <p class="info-text">28004 Madrid, España</p>
+                        <a href="https://maps.google.com/?q=C/Preguntoiro+29,+Madrid" target="_blank" class="info-link">Ver en Google Maps</a>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email" data-placeholder-es="Email" data-placeholder-en="Email" data-placeholder-vi="Email" required>
+
+                    <div class="info-card">
+                        <h3 class="info-title">Horario</h3>
+                        <p class="info-text">De lunes a viernes</p>
+                        <p class="info-text-bold">10:00 AM - 9:00 PM</p>
+                        <p class="info-text">Fin de semana</p>
+                        <p class="info-text-bold">9:00 AM - 10:00 PM</p>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Teléfono" data-placeholder-es="Teléfono" data-placeholder-en="Phone" data-placeholder-vi="Điện thoại" required>
+
+                    <div class="info-card">
+                        <h3 class="info-title">Contacto</h3>
+                        <p class="info-text">Email: info@bmy.es</p>
+                        <p class="info-text">Teléfono: +34 123 456 789</p>
+                        <div class="social-links">
+                            <a href="https://instagram.com/bmy" target="_blank" class="social-btn" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.355 3.608 1.33.975.975 1.268 2.242 1.33 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.355 2.633-1.33 3.608-.975.975-2.242 1.268-3.608 1.33-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.355-3.608-1.33-.975-.975-1.268-2.242-1.33-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.355-2.633 1.33-3.608.975-.975 2.242-1.268 3.608-1.33 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.741 0 8.332.014 7.052.072 5.772.13 4.593.394 3.637 1.35 2.681 2.306 2.417 3.485 2.359 4.765.3 6.045.286 6.454.286 12s.014 5.955.072 7.235c.058 1.28.322 2.459 1.278 3.415.956.956 2.135 1.22 3.415 1.278 1.28.058 1.689.072 7.235.072s5.955-.014 7.235-.072c1.28-.058 2.459-.322 3.415-1.278.956-.956 1.22-2.135 1.278-3.415.058-1.28.072-1.689.072-7.235s-.014-5.955-.072-7.235c-.058-1.28-.322-2.459-1.278-3.415C20.465.394 19.286.13 18.006.072 16.726.014 16.317 0 12 0z"/>
+                                </svg>
+                            </a>
+                            <a href="https://tiktok.com/@bmy" target="_blank" class="social-btn" aria-label="TikTok">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.1 1.75 2.9 2.9 0 0 1 2.31-4.64 2.87 2.87 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.07 6.85 6.85 0 1 0 6.85 6.85V9.5a8.54 8.54 0 0 0 5.1 1.77v-3.58c-.59 0-1.16-.07-1.73-.13z"/>
+                                </svg>
+                            </a>
+                            <a href="https://youtube.com/@bmy" target="_blank" class="social-btn" aria-label="YouTube">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                </svg>
+                            </a>
+                            <a href="https://facebook.com/bmy" target="_blank" class="social-btn" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" data-es="¡Quiero Mi Bánh Mì Gratis!" data-en="I Want My Free Bánh Mì!" data-vi="Tôi muốn Bánh Mì miễn phí của mình!">¡Quiero Mi Bánh Mì Gratis!</button>
+                </div>
+
+                <div class="location-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.234532461468!2d-3.6992!3d40.4168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42260cbf6c6d61%3A0x1234567890abcdef!2sC%2FPreguntoiro%2029%2C%2028004%20Madrid!5e0!3m2!1ses!2ses!4v1234567890123" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Suscríbete a B'My</h2>
+                <p class="newsletter-subtitle">Recibe noticias, ofertas especiales y nuevas recetas</p>
+
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Tu email" class="newsletter-input" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
                 </form>
-
-                <div class="social-proof">
-                    <div class="proof-stat">
-                        <span class="proof-number" id="signupCount">0</span>
-                        <span class="proof-label" data-es="Personas Entusiasmadas" data-en="Excited People" data-vi="Những người hào hứng">Personas Entusiasmadas</span>
-                    </div>
-                </div>
+                <p class="newsletter-message" id="newsletter-message"></p>
             </div>
-            <div class="capture-visual">
-                <div class="capture-mascot">🍞</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stat-card">
-            <h3 class="stat-number">100%</h3>
-            <p data-es="Ingredientes Frescos" data-en="Fresh Ingredients" data-vi="Nguyên liệu Tươi">Ingredientes Frescos</p>
-        </div>
-        <div class="stat-card">
-            <h3 class="stat-number">15+</h3>
-            <p data-es="Sabores Únicos" data-en="Unique Flavors" data-vi="Hương vị Độc đáo">Sabores Únicos</p>
-        </div>
-        <div class="stat-card">
-            <h3 class="stat-number">1</h3>
-            <p data-es="Pasión" data-en="Passion" data-vi="Đam mê">Pasión</p>
-        </div>
-        <div class="stat-card">
-            <h3 class="stat-number">∞</h3>
-            <p data-es="Satisfacción" data-en="Satisfaction" data-vi="Sự hài lòng">Satisfacción</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>B'My</h4>
-                <p data-es="Bánh Mì & Cà Phê" data-en="Bánh Mì & Cà Phê" data-vi="Bánh Mì & Cà Phê">Bánh Mì & Cà Phê</p>
-            </div>
-            <div class="footer-section">
-                <h4 data-es="Enlaces Rápidos" data-en="Quick Links" data-vi="Liên kết nhanh">Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="menu.html" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
-                    <li><a href="story.html" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
-                    <li><a href="contact.html" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4 data-es="Síguenos" data-en="Follow Us" data-vi="Theo dõi chúng tôi">Síguenos</h4>
-                <div class="social-links">
-                    <a href="#" class="social-link">Instagram</a>
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">TikTok</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/logo-white.svg" alt="B'My Logo" class="footer-logo">
+                    <p class="footer-desc">Sabor real, esencia de Vietnam</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Enlaces</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#about">Sobre Nosotros</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-heading">Síguenos</h4>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com/bmy" target="_blank">Instagram</a>
+                        <a href="https://tiktok.com/@bmy" target="_blank">TikTok</a>
+                        <a href="https://facebook.com/bmy" target="_blank">Facebook</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p data-es="© 2026 B'My Vietnam. Hecho con ❤️ en Madrid." data-en="© 2026 B'My Vietnam. Made with ❤️ in Madrid." data-vi="© 2026 B'My Vietnam. Được thực hiện bằng ❤️ ở Madrid.">© 2026 B'My Vietnam. Hecho con ❤️ en Madrid.</p>
+            <div class="footer-bottom">
+                <p>© 2026 B'My. Todos los derechos reservados. Madrid, España.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Floating Mascot -->
+    <div class="floating-mascot" id="floating-mascot">
+        <img src="assets/mascot-coffee.png" alt="B'My Mascot" class="mascot-img">
+    </div>
 
     <script src="main.js"></script>
 </body>
