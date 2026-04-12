@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - B'My Bánh Mì & Cà Phê</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Afacad:wght@400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="vi">VI</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-wrapper">
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#ee3124"/>
+                    <text x="50" y="65" font-size="60" font-weight="bold" text-anchor="middle" fill="white" font-family="Oswald">B</text>
+                </svg>
+                <span class="brand-name">B'My</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
+                <li><a href="menu.html" class="nav-link active" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
+                <li><a href="story.html" class="nav-link" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
+                <li><a href="gallery.html" class="nav-link" data-es="Galería" data-en="Gallery" data-vi="Thư viện">Galería</a></li>
+                <li><a href="contact.html" class="nav-link" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mascot Corner -->
+    <div class="mascot-container">
+        <div class="mascot-character">🍞</div>
+    </div>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <h1 data-es="Nuestro Menú" data-en="Our Menu" data-vi="Thực đơn của chúng tôi">Nuestro Menú</h1>
+        <p data-es="Auténtica cocina vietnamita con un toque madrileño" data-en="Authentic Vietnamese cuisine with a Madrid touch" data-vi="Ẩm thực Việt Nam chính hãng với một chút Madrid">Auténtica cocina vietnamita con un toque madrileño</p>
+        <div class="street-pattern"></div>
+    </section>
+
+    <!-- Menu Tabs -->
+    <section class="menu-section">
+        <div class="menu-tabs">
+            <button class="menu-tab active" data-category="banhmi" data-es="Bánh Mì" data-en="Bánh Mì" data-vi="Bánh Mì">
+                <span class="tab-icon">🥖</span>
+                <span class="tab-text" data-es="Bánh Mì" data-en="Bánh Mì" data-vi="Bánh Mì">Bánh Mì</span>
+            </button>
+            <button class="menu-tab" data-category="coffee" data-es="Cà Phê" data-en="Coffee" data-vi="Cà Phê">
+                <span class="tab-icon">☕</span>
+                <span class="tab-text" data-es="Cà Phê" data-en="Coffee" data-vi="Cà Phê">Cà Phê</span>
+            </button>
+            <button class="menu-tab" data-category="drinks" data-es="Bebidas" data-en="Drinks" data-vi="Đồ uống">
+                <span class="tab-icon">🍵</span>
+                <span class="tab-text" data-es="Bebidas" data-en="Drinks" data-vi="Đồ uống">Bebidas</span>
+            </button>
+        </div>
+
+        <!-- Bánh Mì Category -->
+        <div class="menu-category active" data-category="banhmi">
+            <h2 class="category-title">🥖 <span data-es="Bánh Mì" data-en="Bánh Mì" data-vi="Bánh Mì">Bánh Mì</span></h2>
+            <p class="category-description" data-es="Pan crujiente relleno de ingredientes frescos y auténticos. Cada bocado es una celebración de sabores." data-en="Crispy bread filled with fresh and authentic ingredients. Each bite is a celebration of flavors." data-vi="Bánh mì giòn nhân những nguyên liệu tươi và chính hãng. Mỗi miếng là một lễ kỷ niệm các hương vị.">Pan crujiente relleno de ingredientes frescos y auténticos. Cada bocado es una celebración de sabores.</p>
+
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Xíu Mại</h3>
+                        <span class="item-price">€6.90</span>
+                    </div>
+                    <p class="item-desc" data-es="Jamón, paté, mayonesa, pepinillo, zanahoria, cilantro y ají" data-en="Ham, pâté, mayonnaise, pickle, carrot, cilantro and chili" data-vi="Giăm bông, pâté, sốt mayo, chua, cà rốt, ngò rí và ớt">Jamón, paté, mayonesa, pepinillo, zanahoria, cilantro y ají</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Heo Quay</h3>
+                        <span class="item-price">€7.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Cerdo asado crujiente, pepinillo, zanahoria, cilantro y ají picante" data-en="Crispy roasted pork, pickle, carrot, cilantro and spicy chili" data-vi="Thịt heo quay giòn, chua, cà rốt, ngò rí và ớt cay">Cerdo asado crujiente, pepinillo, zanahoria, cilantro y ají picante</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Thịt Nướng Sả</h3>
+                        <span class="item-price">€7.20</span>
+                    </div>
+                    <p class="item-desc" data-es="Pollo marinado con hierba de limón, mayonesa vietnamita, encurtidos frescos" data-en="Chicken marinated with lemongrass, Vietnamese mayo, fresh pickles" data-vi="Thịt gà ướp thơm, sốt mayo Việt, muối chua tươi">Pollo marinado con hierba de limón, mayonesa vietnamita, encurtidos frescos</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Xá Xíu</h3>
+                        <span class="item-price">€7.20</span>
+                    </div>
+                    <p class="item-desc" data-es="Cerdo glaseado a fuego lento, mayonesa picante, verduras crujientes" data-en="Slow-glazed pork, spicy mayo, crispy vegetables" data-vi="Thịt heo nấu chậm, sốt mayo cay, rau giòn">Cerdo glaseado a fuego lento, mayonesa picante, verduras crujientes</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Chả Lụa</h3>
+                        <span class="item-price">€6.90</span>
+                    </div>
+                    <p class="item-desc" data-es="Embutido vietnamita tradicional, mayonesa, encurtidos, cilantro fresco" data-en="Traditional Vietnamese sausage, mayo, pickles, fresh cilantro" data-vi="Xúc xích Việt truyền thống, mayo, chua, ngò rí tươi">Embutido vietnamita tradicional, mayonesa, encurtidos, cilantro fresco</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Thịt Khìa Nước Dừa</h3>
+                        <span class="item-price">€7.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Cerdo braseado en leche de coco, especias vietnamitas, verduras tiernas" data-en="Pork braised in coconut milk, Vietnamese spices, tender vegetables" data-vi="Thịt lợn hầm trong nước cốt dừa, gia vị Việt, rau mềm">Cerdo braseado en leche de coco, especias vietnamitas, verduras tiernas</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Gà Xé</h3>
+                        <span class="item-price">€6.90</span>
+                    </div>
+                    <p class="item-desc" data-es="Pollo desmenuzado cocido, mayonesa, pepinillo, cilantro y ají" data-en="Shredded cooked chicken, mayo, pickle, cilantro and chili" data-vi="Thịt gà nấu mềm tơi, mayo, chua, ngò rí và ớt">Pollo desmenuzado cocido, mayonesa, pepinillo, cilantro y ají</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Đùi Gà Nướng</h3>
+                        <span class="item-price">€7.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Muslo de pollo marinado y asado, mayonesa picante, verduras frescas" data-en="Marinated and grilled chicken thigh, spicy mayo, fresh vegetables" data-vi="Đùi gà ướp và nướng, sốt mayo cay, rau tươi">Muslo de pollo marinado y asado, mayonesa picante, verduras frescas</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coffee Category -->
+        <div class="menu-category" data-category="coffee">
+            <h2 class="category-title">☕ <span data-es="Cà Phê" data-en="Coffee" data-vi="Cà Phê">Cà Phê</span></h2>
+            <p class="category-description" data-es="Café vietnamita auténtico, preparado con tradición y pasión. Desde suave hasta intenso, cada taza es perfección." data-en="Authentic Vietnamese coffee, prepared with tradition and passion. From smooth to intense, every cup is perfection." data-vi="Cà phê Việt chính hãng, được chuẩn bị với truyền thống và đam mê. Từ nhẹ nhàng đến đậm đà, mỗi tách là hoàn hảo.">Café vietnamita auténtico, preparado con tradición y pasión. Desde suave hasta intenso, cada taza es perfección.</p>
+
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cà Phê Sữa Sài Gòn</h3>
+                        <span class="item-price">€4.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Espresso vietnamita clásico con leche condensada dulce. Cremoso y adictivo." data-en="Classic Vietnamese espresso with sweet condensed milk. Creamy and addictive." data-vi="Cà phê espresso Việt cổ điển với sữa đặc ngọt. Kem và gây nghiện.">Espresso vietnamita clásico con leche condensada dulce. Cremoso y adictivo.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Bạc Xỉu</h3>
+                        <span class="item-price">€4.20</span>
+                    </div>
+                    <p class="item-desc" data-es="Café y leche condensada en proporción 50-50. Suave y equilibrado." data-en="Coffee and condensed milk in 50-50 ratio. Smooth and balanced." data-vi="Cà phê và sữa đặc tỷ lệ 50-50. Mịn và cân bằng.">Café y leche condensada en proporción 50-50. Suave y equilibrado.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cà Phê Đen</h3>
+                        <span class="item-price">€3.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Espresso puro vietnamita sin dulce. Fuerte, amargo y auténtico." data-en="Pure Vietnamese espresso without sweetness. Strong, bitter and authentic." data-vi="Cà phê espresso Việt thuần chủng không ngọt. Mạnh, đắng và chính hãng.">Espresso puro vietnamita sin dulce. Fuerte, amargo y auténtico.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cold Brew Original</h3>
+                        <span class="item-price">€5.00</span>
+                    </div>
+                    <p class="item-desc" data-es="Café frío concentrado preparado 12 horas. Suave, dulce, sin acidez." data-en="Cold concentrated coffee prepared 12 hours. Smooth, sweet, no acidity." data-vi="Cà phê lạnh tập trung được chuẩn bị 12 giờ. Mịn, ngọt, không axit.">Café frío concentrado preparado 12 horas. Suave, dulce, sin acidez.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cold Brew Cam</h3>
+                        <span class="item-price">€5.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Cold brew con naranja y miel. Refrescante con notas cítricas." data-en="Cold brew with orange and honey. Refreshing with citrus notes." data-vi="Cold brew với cam và mật ong. Sảng khoái với mùi cam.">Cold brew con naranja y miel. Refrescante con notas cítricas.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cà Phê Dừa Hạnh Nhân</h3>
+                        <span class="item-price">€5.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Café con leche de coco y almendras. Tropical y cremoso." data-en="Coffee with coconut and almond milk. Tropical and creamy." data-vi="Cà phê với sữa dừa và hạnh nhân. Nhiệt đới và kem.">Café con leche de coco y almendras. Tropical y cremoso.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Latte / Cappuccino / Americano</h3>
+                        <span class="item-price">€4.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Clásicos italianos preparados con café vietnamita premium. Lo mejor de dos mundos." data-en="Italian classics prepared with premium Vietnamese coffee. Best of both worlds." data-vi="Những tác phẩm kinh điển Ý được chuẩn bị bằng cà phê Việt cao cấp.">Clásicos italianos preparados con café vietnamita premium. Lo mejor de dos mundos.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cà Phê Muối</h3>
+                        <span class="item-price">€4.80</span>
+                    </div>
+                    <p class="item-desc" data-es="Café con sal marina fina. Una tendencia moderna que equilibra amargura con salinidad." data-en="Coffee with fine sea salt. A modern trend that balances bitterness with salinity." data-vi="Cà phê với muối biển mịn. Một xu hướng hiện đại cân bằng độ đắng với vị mặn.">Café con sal marina fina. Una tendencia moderna que equilibra amargura con salinidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Drinks Category -->
+        <div class="menu-category" data-category="drinks">
+            <h2 class="category-title">🍵 <span data-es="Bebidas" data-en="Drinks" data-vi="Đồ uống">Bebidas</span></h2>
+            <p class="category-description" data-es="Bebidas refrescantes y innovadoras. Desde té matcha tradicional hasta jugos naturales frescos." data-en="Refreshing and innovative drinks. From traditional matcha tea to fresh natural juices." data-vi="Những thức uống sảng khoái và sáng tạo. Từ trà matcha truyền thống đến nước ép tươi tự nhiên.">Bebidas refrescantes e innovadoras. Desde té matcha tradicional hasta jugos naturales frescos.</p>
+
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Matcha Latte</h3>
+                        <span class="item-price">€5.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Té matcha premium batido con leche espumada. Suave, dulce, energético." data-en="Premium matcha tea whisked with frothed milk. Smooth, sweet, energetic." data-vi="Trà matcha cao cấp đánh với sữa tạo bọt. Mịn, ngọt, đầy năng lượng.">Té matcha premium batido con leche espumada. Suave, dulce, energético.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Matcha Latte Mango</h3>
+                        <span class="item-price">€5.80</span>
+                    </div>
+                    <p class="item-desc" data-es="Matcha con puré de mango tropical. Dulce, refrescante, vibrante." data-en="Matcha with tropical mango puree. Sweet, refreshing, vibrant." data-vi="Matcha với cơm xay xoài nhiệt đới. Ngọt, sảng khoái, sống động.">Matcha con puré de mango tropical. Dulce, refrescante, vibrante.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Matcha Macchiato</h3>
+                        <span class="item-price">€6.00</span>
+                    </div>
+                    <p class="item-desc" data-es="Matcha latte con espresso vietnamita. El encuentro perfecto entre Oriente y café." data-en="Matcha latte with Vietnamese espresso. Perfect meeting of East and coffee." data-vi="Latte matcha với espresso Việt. Cuộc gặp gỡ hoàn hảo của Đông phương và cà phê.">Matcha latte con espresso vietnamita. El encuentro perfecto entre Oriente y café.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Nước Ép Thơm</h3>
+                        <span class="item-price">€5.00</span>
+                    </div>
+                    <p class="item-desc" data-es="Zumo de hierba de limón fresca prensada. Refrescante, cítrico, natural." data-en="Fresh pressed lemongrass juice. Refreshing, citric, natural." data-vi="Nước ép thơm tươi. Sảng khoái, citric, tự nhiên.">Zumo de hierba de limón fresca prensada. Refrescante, cítrico, natural.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Nước Ép Cam</h3>
+                        <span class="item-price">€4.80</span>
+                    </div>
+                    <p class="item-desc" data-es="Zumo de naranja natural recién prensado. Vitaminado, dulce, natural." data-en="Fresh pressed natural orange juice. Vitaminated, sweet, natural." data-vi="Nước cam tự nhiên vừa ép. Giàu vitamin, ngọt, tự nhiên.">Zumo de naranja natural recién prensado. Vitaminado, dulce, natural.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Cam & Thơm</h3>
+                        <span class="item-price">€5.30</span>
+                    </div>
+                    <p class="item-desc" data-es="Combinación de naranja y hierba de limón. Lo mejor de dos mundos en una copa." data-en="Combination of orange and lemongrass. Best of two worlds in one glass." data-vi="Sự kết hợp của cam và thơm. Điều tốt nhất của hai thế giới trong một cốc.">Combinación de naranja y hierba de limón. Lo mejor de dos mundos en una copa.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Sữa Chua Yến Mạch</h3>
+                        <span class="item-price">€5.50</span>
+                    </div>
+                    <p class="item-desc" data-es="Yogur con leche de avena y granola casera. Cremoso, nutritivo, saludable." data-en="Yogurt with oat milk and homemade granola. Creamy, nutritious, healthy." data-vi="Sữa chua với sữa yến mạch và granola tự chế. Kem, dinh dưỡng, lành mạnh.">Yogur con leche de avena y granola casera. Cremoso, nutritivo, saludable.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Sữa Chua Cốt Dừa & Granola</h3>
+                        <span class="item-price">€5.80</span>
+                    </div>
+                    <p class="item-desc" data-es="Yogur de coco con granola premium tostada. Tropical, crujiente, adictivo." data-en="Coconut yogurt with toasted premium granola. Tropical, crunchy, addictive." data-vi="Sữa chua dừa với granola cao cấp rang. Nhiệt đới, giòn, gây nghiện.">Yogur de coco con granola premium tostada. Tropical, crujiente, adictivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="menu-cta">
+        <h2 data-es="¿Tienes Hambre?" data-en="Are You Hungry?" data-vi="Bạn đói không?">¿Tienes Hambre?</h2>
+        <p data-es="Visítanos en Madrid y prueba nuestras delicias auténticas." data-en="Visit us in Madrid and taste our authentic delights." data-vi="Ghé thăm chúng tôi ở Madrid và thưởng thức những đặc sản chính hãng của chúng tôi.">Visítanos en Madrid y prueba nuestras delicias auténticas.</p>
+        <a href="contact.html" class="btn btn-primary" data-es="Ubicación y Horarios" data-en="Location & Hours" data-vi="Vị trí và Giờ mở cửa">Ubicación y Horarios</a>
+        <div class="street-pattern"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>B'My</h4>
+                <p data-es="Bánh Mì & Cà Phê" data-en="Bánh Mì & Cà Phê" data-vi="Bánh Mì & Cà Phê">Bánh Mì & Cà Phê</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-es="Enlaces Rápidos" data-en="Quick Links" data-vi="Liên kết nhanh">Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
+                    <li><a href="story.html" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
+                    <li><a href="gallery.html" data-es="Galería" data-en="Gallery" data-vi="Thư viện">Galería</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-es="Síguenos" data-en="Follow Us" data-vi="Theo dõi chúng tôi">Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-es="© 2026 B'My Vietnam. Hecho con ❤️ en Madrid." data-en="© 2026 B'My Vietnam. Made with ❤️ in Madrid." data-vi="© 2026 B'My Vietnam. Được thực hiện bằng ❤️ ở Madrid.">© 2026 B'My Vietnam. Hecho con ❤️ en Madrid.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
