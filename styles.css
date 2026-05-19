@@ -420,18 +420,24 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 .page-hero .script { color: var(--red); display: block; margin: -8px 0 0; }
 .page-hero p { color: var(--ink-soft); max-width: 56ch; margin: 18px auto 0; }
 
-/* Variant: page hero as full-image banner (used on menu.html with hero.png) */
+/* Variant: page hero as full-image banner (used on menu.html + homepage with hero.png) */
 .page-hero.has-image {
-  background: #ffd60a url('assets/photos/hero.png') center / contain no-repeat;
+  background: #ffd60a;
   padding: 0;
-  aspect-ratio: 1920 / 1080;
-  min-height: 320px;
-  max-height: 620px;
+  overflow: hidden;
+  min-height: 0;
+  max-height: none;
+  aspect-ratio: auto;
+  display: block;
+  line-height: 0;
 }
 .page-hero.has-image::before { display: none; }
 .page-hero.has-image > .container { display: none; }
-@media (max-width: 720px) {
-  .page-hero.has-image { aspect-ratio: 16 / 11; max-height: none; min-height: 220px; }
+.page-hero.has-image img.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .journey-intro { font-size: clamp(18px, 2vw, 22px); color: var(--ink); max-width: 720px; margin: 0 auto 60px; text-align: center; font-style: italic; }
