@@ -1,263 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú - B'My Bánh Mì & Cà Phê</title>
-    <link rel="icon" type="image/svg+xml" href="assets/logo-red.svg">
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2EVGFPTL9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F2EVGFPTL9');
-    </script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Afacad:wght@400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#ee3124" />
+<meta name="description" content="Menú B'My: bánh mì auténticos, cà phê vietnamita y bebidas frescas. Chamberí, Madrid." />
+<title>Menú · B'My Bánh Mì & Cà Phê</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo-red.svg" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F2EVGFPTL9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2EVGFPTL9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Afacad:wght@400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="vi">VI</button>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html"><img src="assets/logo-red.svg" alt="B'My"><span class="wordmark">B'my</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
+      <li><a href="menu.html" class="active" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
+      <li><a href="story.html" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
+      <li><a href="gallery.html" data-es="Galería" data-en="Gallery" data-vi="Bộ sưu tập">Galería</a></li>
+      <li><a href="contact.html" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher"><button data-lang="es" class="active">ES</button><button data-lang="en">EN</button><button data-lang="vi">VI</button></div>
+      <button class="nav-toggle" aria-label="Menú" id="navToggle">☰</button>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--yellow)" data-es="Nuestro menú" data-en="Our menu" data-vi="Thực đơn">Nuestro menú</span>
+    <h1 data-es="Sabor real" data-en="Real flavor" data-vi="Hương vị thật">Sabor real</h1>
+    <span class="script" data-es="hecho a mano" data-en="made by hand" data-vi="làm thủ công">hecho a mano</span>
+    <p data-es="Seis bánh mì firmados, cuatro bebidas heredadas de Đà Lạt. Pan recién hecho cada mañana, ingredientes frescos cada día." data-en="Six signature banh mi, four drinks inherited from Đà Lạt. Bread baked every morning, fresh ingredients daily." data-vi="6 loại bánh mì đặc trưng, 4 đồ uống từ Đà Lạt. Bánh ra lò mỗi sáng, nguyên liệu tươi mỗi ngày.">Seis bánh mì firmados, cuatro bebidas heredadas de Đà Lạt. Pan recién hecho cada mañana, ingredientes frescos cada día.</p>
+  </div>
+</section>
+
+<section style="background:var(--cream);">
+  <div class="container">
+    <div class="menu-tabs">
+      <button class="menu-tab active" data-target="all" data-es="Todo" data-en="All" data-vi="Tất cả">Todo</button>
+      <button class="menu-tab" data-target="banhmi" data-es="Bánh Mì" data-en="Banh Mi" data-vi="Bánh mì">Bánh Mì</button>
+      <button class="menu-tab" data-target="drinks" data-es="Bebidas" data-en="Drinks" data-vi="Đồ uống">Bebidas</button>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo-wrapper">
-                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" fill="#ee3124"/>
-                    <text x="50" y="65" font-size="60" font-weight="bold" text-anchor="middle" fill="white" font-family="Oswald">B</text>
-                </svg>
-                <span class="brand-name">B'My</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
-                <li><a href="menu.html" class="nav-link active" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
-                <li><a href="story.html" class="nav-link" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
-                <li><a href="gallery.html" class="nav-link" data-es="Galería" data-en="Gallery" data-vi="Thư viện">Galería</a></li>
-                <li><a href="contact.html" class="nav-link" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mascot Corner -->
-    <div class="mascot-container">
-        <div class="mascot-character">🍞</div>
+    <div class="menu-grid" data-menu-group="banhmi">
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/banhmi-grilled.jpg" alt="El Asado Crujiente" loading="lazy"><span class="tag" data-es="Popular" data-en="Popular" data-vi="Hot">Popular</span></div>
+        <div class="menu-item-body"><div class="head"><h3>El Asado Crujiente</h3><span class="price">€7,50</span></div><p data-es="Cerdo asado crujiente, paté casero, encurtidos frescos, cilantro y guindilla. El clásico de Saigón." data-en="Crispy roasted pork, homemade pâté, fresh pickles, cilantro and chili. The Saigon classic." data-vi="Heo quay giòn, pâté nhà làm, đồ chua, ngò và ớt. Kinh điển Sài Gòn.">Cerdo asado crujiente, paté casero, encurtidos frescos, cilantro y guindilla. El clásico de Saigón.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/banhmi-hero.jpg" alt="Brocheta al Parilla" loading="lazy"></div>
+        <div class="menu-item-body"><div class="head"><h3>Brocheta al Parilla</h3><span class="price">€7,20</span></div><p data-es="Brocheta de cerdo a la parrilla con hierba limón, encurtidos, cilantro y salsa especial B'My." data-en="Grilled marinated pork skewer with lemongrass, pickles, cilantro and special B'My sauce." data-vi="Thịt xiên nướng sả ớt, đồ chua, ngò và sốt đặc biệt B'My.">Brocheta de cerdo a la parrilla con hierba limón, encurtidos, cilantro y salsa especial B'My.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/banhmi-closeup.jpg" alt="El Pollo Feliz" loading="lazy"></div>
+        <div class="menu-item-body"><div class="head"><h3>El Pollo Feliz</h3><span class="price">€6,90</span></div><p data-es="Pollo jugoso con especias vietnamitas, mayonesa casera, encurtidos y hierbas frescas." data-en="Juicy chicken with Vietnamese spices, homemade mayo, pickles and fresh herbs." data-vi="Gà ướp gia vị Việt, sốt mayo nhà làm, đồ chua và rau thơm.">Pollo jugoso con especias vietnamitas, mayonesa casera, encurtidos y hierbas frescas.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/banhmi-basket.jpg" alt="Hanoi Auténtico" loading="lazy"></div>
+        <div class="menu-item-body"><div class="head"><h3>Hanói Auténtico</h3><span class="price">€6,90</span></div><p data-es="El clásico de Hà Nội: jamón, paté, pepinillo, zanahoria, cilantro y guindilla." data-en="The Hà Nội classic: ham, pâté, pickle, carrot, cilantro and chili." data-vi="Bánh mì Hà Nội: giăm bông, pâté, dưa chuột, cà rốt, ngò, ớt.">El clásico de Hà Nội: jamón, paté, pepinillo, zanahoria, cilantro y guindilla.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/banhmi-wood.jpg" alt="El Vegetariano" loading="lazy"></div>
+        <div class="menu-item-body"><div class="head"><h3>El Vegetariano</h3><span class="price">€6,90</span></div><p data-es="Tofu marinado, setas, encurtidos frescos, mayonesa vegana, cilantro y guindilla." data-en="Marinated tofu, mushrooms, fresh pickles, vegan mayo, cilantro and chili." data-vi="Đậu phụ ướp, nấm, đồ chua, sốt mayo chay, ngò và ớt.">Tofu marinado, setas, encurtidos frescos, mayonesa vegana, cilantro y guindilla.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/banhmi-editorial.jpg" alt="Special B'My" loading="lazy"><span class="tag" style="background:var(--blue)" data-es="Especial" data-en="Special" data-vi="Đặc biệt">Especial</span></div>
+        <div class="menu-item-body"><div class="head"><h3>Special B'My</h3><span class="price">€7,50</span></div><p data-es="Carnes selectas, paté premium, salsa secreta de la casa. La firma de B'My." data-en="Premium meats, premium pâté, the house secret sauce. B'My's signature." data-vi="Thịt cao cấp, pâté đặc biệt, sốt bí mật của nhà. Đặc trưng B'My.">Carnes selectas, paté premium, salsa secreta de la casa. La firma de B'My.</p></div>
+      </article>
     </div>
 
-    <!-- Menu Hero -->
-    <section class="menu-hero">
-        <h1 data-es="Nuestro Menú" data-en="Our Menu" data-vi="Thực đơn của chúng tôi">Nuestro Menú</h1>
-        <p data-es="Auténtica cocina vietnamita con un toque madrileño" data-en="Authentic Vietnamese cuisine with a Madrid touch" data-vi="Ẩm thực Việt Nam chính hãng với một chút Madrid">Auténtica cocina vietnamita con un toque madrileño</p>
-        <div class="street-pattern"></div>
-    </section>
+    <div class="divider"><span class="star">★</span></div>
 
-    <!-- Menu Tabs -->
-    <section class="menu-section">
-        <div class="menu-tabs">
-            <button class="menu-tab active" data-category="banhmi" data-es="Bánh Mì" data-en="Bánh Mì" data-vi="Bánh Mì">
-                <span class="tab-icon">🥖</span>
-                <span class="tab-text" data-es="Bánh Mì" data-en="Bánh Mì" data-vi="Bánh Mì">Bánh Mì</span>
-            </button>
-            <button class="menu-tab" data-category="drinks" data-es="Bebidas" data-en="Drinks" data-vi="Đồ Uống">
-                <span class="tab-icon">☕</span>
-                <span class="tab-text" data-es="Bebidas" data-en="Drinks" data-vi="Đồ Uống">Bebidas</span>
-            </button>
-        </div>
+    <div class="menu-grid" data-menu-group="drinks">
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/caphe-watercolor.jpg" alt="Cà Phê Đen Đá" loading="lazy"></div>
+        <div class="menu-item-body"><div class="head"><h3>Cà Phê Đen Đá</h3><span class="price">€2,80</span></div><p data-es="Café negro vietnamita con hielo. Filtrado a la antigua, sin azúcar, puro carácter." data-en="Vietnamese black iced coffee. Old-school filtered, no sugar, pure character." data-vi="Cà phê đen đá Việt. Phin truyền thống, không đường, đậm chất.">Café negro vietnamita con hielo. Filtrado a la antigua, sin azúcar, puro carácter.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/coffee-watercolor.jpg" alt="Cà Phê Sữa Đá" loading="lazy"><span class="tag" data-es="Top venta" data-en="Best seller" data-vi="Bán chạy">Top venta</span></div>
+        <div class="menu-item-body"><div class="head"><h3>Cà Phê Sữa Đá</h3><span class="price">€3,50</span></div><p data-es="Café con leche condensada y hielo. Dulce, fuerte, vietnamita 100%." data-en="Coffee with condensed milk and ice. Sweet, strong, 100% Vietnamese." data-vi="Cà phê sữa đặc, đá. Ngọt, đậm, 100% Việt.">Café con leche condensada y hielo. Dulce, fuerte, vietnamita 100%.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/caphe-watercolor.jpg" alt="Bạc Xỉu" loading="lazy"></div>
+        <div class="menu-item-body"><div class="head"><h3>Bạc Xỉu</h3><span class="price">€3,50</span></div><p data-es="Café suave con más leche condensada. Para los que prefieren el dulce sobre el fuerte." data-en="Smooth coffee with extra condensed milk. For those who prefer sweet over strong." data-vi="Cà phê nhẹ với nhiều sữa hơn. Cho ai chuộng ngọt hơn đắng.">Café suave con más leche condensada. Para los que prefieren el dulce sobre el fuerte.</p></div>
+      </article>
+      <article class="menu-item">
+        <div class="menu-item-img"><img src="assets/photos/illustration-stool.jpg" alt="Trà Sả Tắc" loading="lazy"></div>
+        <div class="menu-item-body"><div class="head"><h3>Trà Sả Tắc</h3><span class="price">€4,00</span></div><p data-es="Té de hierba limón con calamansi. Refrescante, cítrico, sin cafeína." data-en="Lemongrass tea with calamansi. Refreshing, citrusy, caffeine-free." data-vi="Trà sả tắc. Mát lạnh, chua thanh, không caffeine.">Té de hierba limón con calamansi. Refrescante, cítrico, sin cafeína.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-        <!-- Bánh Mì Category -->
-        <div class="menu-category active" data-category="banhmi">
-            <h2 class="category-title">🥖 <span data-es="Bánh Mì" data-en="Bánh Mì" data-vi="Bánh Mì">Bánh Mì</span></h2>
-            <p class="category-description" data-es="Pan crujiente artesanal relleno de ingredientes frescos y auténticos. Cada bocado es un viaje a las calles de Vietnam." data-en="Artisan crispy bread filled with fresh, authentic ingredients. Every bite is a journey to the streets of Vietnam." data-vi="Bánh mì giòn thủ công với nguyên liệu tươi ngon chính hiệu. Mỗi miếng cắn là một chuyến du hành đến đường phố Việt Nam.">Pan crujiente artesanal relleno de ingredientes frescos y auténticos. Cada bocado es un viaje a las calles de Vietnam.</p>
+<section class="newsletter">
+  <div class="container inner">
+    <span class="eyebrow" data-es="Únete a B'My" data-en="Join B'My" data-vi="Tham gia B'My">Únete a B'My</span>
+    <h2 data-es="Recibe novedades y promociones" data-en="Get news and promos" data-vi="Tin tức & ưu đãi">Recibe novedades y promociones</h2>
+    <p data-es="El primero en saber qué hay nuevo en la barra y en la cocina." data-en="First to know what's new at the bar and in the kitchen." data-vi="Người đầu tiên biết gì mới ở quầy và bếp.">El primero en saber qué hay nuevo en la barra y en la cocina.</p>
+    <form id="newsletterForm" onsubmit="event.preventDefault();">
+      <input type="email" required placeholder="tu@email.com" aria-label="Email" />
+      <button class="btn btn-primary" type="submit" data-es="Suscribirme" data-en="Subscribe" data-vi="Đăng ký">Suscribirme</button>
+    </form>
+  </div>
+</section>
 
-            <div class="menu-items">
-                <div class="menu-item" data-item="el-asado-crujiente">
-                    <div class="item-image">
-                        <img src="assets/photos/banhmi-grilled.jpg" alt="El Asado Crujiente" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>El Asado Crujiente</h3>
-                            <span class="item-price">€8,00</span>
-                        </div>
-                        <p class="item-desc" data-es="Cerdo asado crujiente con paté casero, encurtidos frescos, cilantro y guindilla. El clásico de Saigón." data-en="Crispy roasted pork with homemade pâté, fresh pickles, cilantro and chili. The Saigon classic." data-vi="Thịt heo quay giòn với pâté nhà làm, đồ chua, rau mùi và ớt. Kinh điển Sài Gòn.">Cerdo asado crujiente con paté casero, encurtidos frescos, cilantro y guindilla. El clásico de Saigón.</p>
-                    </div>
-                </div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="wordmark">B'my</div><p data-es="Specialty bánh mì y cà phê vietnamita en Madrid. Sabor real, esencia de Vietnam." data-en="Specialty Vietnamese banh mi and ca phe in Madrid. Real flavor, essence of Vietnam." data-vi="Bánh mì và cà phê Việt chuyên biệt tại Madrid. Hương vị thật, tinh hoa Việt.">Specialty bánh mì y cà phê vietnamita en Madrid. Sabor real, esencia de Vietnam.</p></div>
+      <div><h5>Explora</h5><ul><li><a href="menu.html">Menú</a></li><li><a href="story.html">Historia</a></li><li><a href="gallery.html">Galería</a></li><li><a href="contact.html">Contacto</a></li></ul></div>
+      <div><h5>Visítanos</h5><ul><li>C/ Fernández de los Ríos, 106</li><li>Chamberí · 28015 Madrid</li><li><a href="mailto:hola@bmy.es">hola@bmy.es</a></li><li><a href="https://wa.me/34604110755" target="_blank" rel="noopener">+34 604 110 755</a></li></ul></div>
+      <div><h5>Síguenos</h5><div class="footer-social"><a href="https://instagram.com/bmy.madrid" target="_blank" rel="noopener" aria-label="Instagram">IG</a><a href="https://tiktok.com/@bmy.madrid" target="_blank" rel="noopener" aria-label="TikTok">TT</a><a href="https://facebook.com/bmy.madrid" target="_blank" rel="noopener" aria-label="Facebook">FB</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 B'My. Madrid, España.</span><span>★ Apertura 26 · 05 · 2026 ★</span></div>
+  </div>
+</footer>
 
-                <div class="menu-item" data-item="brocheta-al-parilla">
-                    <div class="item-image">
-                        <img src="assets/photos/banhmi-hero.jpg" alt="Brocheta al Parilla" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>Brocheta al Parilla</h3>
-                            <span class="item-price">€8,50</span>
-                        </div>
-                        <p class="item-desc" data-es="Brocheta de cerdo marinado a la parrilla con hierba limón, encurtidos, cilantro y salsa especial B'My." data-en="Grilled marinated pork skewer with lemongrass, pickles, cilantro and special B'My sauce." data-vi="Thịt xiên nướng sả ớt, đồ chua, rau mùi và sốt đặc biệt B'My.">Brocheta de cerdo marinado a la parrilla con hierba limón, encurtidos, cilantro y salsa especial B'My.</p>
-                    </div>
-                </div>
+<a class="fab-whatsapp" href="https://wa.me/34604110755" target="_blank" rel="noopener" aria-label="WhatsApp B'my">W</a>
 
-                <div class="menu-item" data-item="el-pollo-feliz">
-                    <div class="item-image">
-                        <img src="assets/photos/banhmi-closeup.jpg" alt="El Pollo Feliz" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>El Pollo Feliz</h3>
-                            <span class="item-price">€8,00</span>
-                        </div>
-                        <p class="item-desc" data-es="Pollo jugoso marinado con especias vietnamitas, mayonesa casera, encurtidos y hierbas frescas." data-en="Juicy chicken marinated with Vietnamese spices, homemade mayo, pickles and fresh herbs." data-vi="Gà ướp gia vị Việt, sốt mayo nhà làm, đồ chua và rau thơm.">Pollo jugoso marinado con especias vietnamitas, mayonesa casera, encurtidos y hierbas frescas.</p>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-item="hanoi-autentico">
-                    <div class="item-image">
-                        <img src="assets/photos/banhmi-wood.jpg" alt="Hanoi Auténtico" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>Hanoi Auténtico</h3>
-                            <span class="item-price">€8,00</span>
-                        </div>
-                        <p class="item-desc" data-es="El auténtico bánh mì de Hanoi. Jamón, paté, pepinillo, zanahoria, cilantro y guindilla." data-en="The authentic Hanoi bánh mì. Ham, pâté, pickle, carrot, cilantro and chili." data-vi="Bánh mì Hà Nội chính hiệu. Giăm bông, pâté, dưa chuột, cà rốt, rau mùi và ớt.">El auténtico bánh mì de Hanoi. Jamón, paté, pepinillo, zanahoria, cilantro y guindilla.</p>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-item="el-vegetariano">
-                    <div class="item-image">
-                        <img src="assets/photos/banhmi-hero.jpg" alt="El Vegetariano" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>El Vegetariano</h3>
-                            <span class="item-price">€7,00</span>
-                        </div>
-                        <p class="item-desc" data-es="Tofu marinado, setas, encurtidos frescos, cilantro, guindilla y salsa de soja especial." data-en="Marinated tofu, mushrooms, fresh pickles, cilantro, chili and special soy sauce." data-vi="Đậu hũ ướp, nấm, đồ chua, rau mùi, ớt và nước tương đặc biệt.">Tofu marinado, setas, encurtidos frescos, cilantro, guindilla y salsa de soja especial.</p>
-                    </div>
-                </div>
-
-                <div class="menu-item featured" data-item="special-bmy">
-                    <div class="item-image">
-                        <img src="assets/photos/banhmi-grilled.jpg" alt="Special B'My" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>Special B'My ⭐</h3>
-                            <span class="item-price">€9,50</span>
-                        </div>
-                        <p class="item-desc" data-es="Nuestra creación especial. Combinación de carnes selectas, paté premium, encurtidos y salsa secreta B'My." data-en="Our special creation. Combination of select meats, premium pâté, pickles and B'My secret sauce." data-vi="Sáng tạo đặc biệt của chúng tôi. Kết hợp thịt chọn lọc, pâté cao cấp, đồ chua và sốt bí mật B'My.">Nuestra creación especial. Combinación de carnes selectas, paté premium, encurtidos y salsa secreta B'My.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Đồ Uống Category -->
-        <div class="menu-category" data-category="drinks">
-            <h2 class="category-title">☕ <span data-es="Bebidas" data-en="Drinks" data-vi="Đồ Uống">Bebidas</span></h2>
-            <p class="category-description" data-es="Café vietnamita auténtico y bebidas refrescantes. Preparados con tradición y pasión." data-en="Authentic Vietnamese coffee and refreshing drinks. Prepared with tradition and passion." data-vi="Cà phê Việt chính hiệu và đồ uống thanh mát. Pha chế với truyền thống và đam mê.">Café vietnamita auténtico y bebidas refrescantes. Preparados con tradición y pasión.</p>
-
-            <div class="menu-items">
-                <div class="menu-item" data-item="ca-phe-den-da">
-                    <div class="item-image">
-                        <img src="assets/photos/caphe-watercolor.jpg" alt="Cà Phê Đen Đá" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>Cà Phê Đen Đá</h3>
-                            <span class="item-price">€2,50</span>
-                        </div>
-                        <p class="item-desc" data-es="Café negro vietnamita con hielo. Intenso, amargo y auténtico. Preparado con phin tradicional." data-en="Vietnamese iced black coffee. Intense, bitter and authentic. Brewed with traditional phin filter." data-vi="Cà phê đen đá truyền thống. Đậm đà, đắng nhẹ, pha phin cổ điển.">Café negro vietnamita con hielo. Intenso, amargo y auténtico. Preparado con phin tradicional.</p>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-item="ca-phe-sua-da">
-                    <div class="item-image">
-                        <img src="assets/photos/coffee-watercolor.jpg" alt="Cà Phê Sữa Đá" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>Cà Phê Sữa Đá</h3>
-                            <span class="item-price">€3,00</span>
-                        </div>
-                        <p class="item-desc" data-es="Café vietnamita con leche condensada y hielo. Cremoso, dulce y adictivo." data-en="Vietnamese iced coffee with condensed milk. Creamy, sweet and addictive." data-vi="Cà phê sữa đá Sài Gòn. Béo ngậy, ngọt ngào, gây nghiện.">Café vietnamita con leche condensada y hielo. Cremoso, dulce y adictivo.</p>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-item="bac-xiu">
-                    <div class="item-image">
-                        <img src="assets/photos/caphe-watercolor.jpg" alt="Bạc Xỉu" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>Bạc Xỉu</h3>
-                            <span class="item-price">€3,50</span>
-                        </div>
-                        <p class="item-desc" data-es="Café suave con abundante leche condensada. La versión dulce y cremosa del café vietnamita." data-en="Mild coffee with generous condensed milk. The sweet, creamy version of Vietnamese coffee." data-vi="Bạc xỉu — cà phê nhẹ nhiều sữa. Phiên bản ngọt ngào của cà phê Việt.">Café suave con abundante leche condensada. La versión dulce y cremosa del café vietnamita.</p>
-                    </div>
-                </div>
-
-                <div class="menu-item" data-item="tra-sa-tac">
-                    <div class="item-image">
-                        <img src="assets/illu-coffee.png" alt="Trà Sả Tắc" loading="lazy">
-                    </div>
-                    <div class="item-info">
-                        <div class="item-header">
-                            <h3>Trà Sả Tắc</h3>
-                            <span class="item-price">€4,00</span>
-                        </div>
-                        <p class="item-desc" data-es="Té de hierba limón con calamansi y hielo. Refrescante, cítrico y natural." data-en="Lemongrass tea with calamansi and ice. Refreshing, citrusy and natural." data-vi="Trà sả tắc mát lạnh. Thanh mát, chua nhẹ, tự nhiên.">Té de hierba limón con calamansi y hielo. Refrescante, cítrico y natural.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="menu-cta">
-        <h2 data-es="¿Tienes Hambre?" data-en="Are You Hungry?" data-vi="Bạn đói không?">¿Tienes Hambre?</h2>
-        <p data-es="Visítanos en Madrid y prueba nuestras delicias auténticas." data-en="Visit us in Madrid and taste our authentic delights." data-vi="Ghé thăm chúng tôi ở Madrid và thưởng thức những đặc sản chính hãng của chúng tôi.">Visítanos en Madrid y prueba nuestras delicias auténticas.</p>
-        <a href="contact.html" class="btn btn-primary" data-es="Ubicación y Horarios" data-en="Location & Hours" data-vi="Vị trí và Giờ mở cửa">Ubicación y Horarios</a>
-        <div class="street-pattern"></div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>B'My</h4>
-                <p data-es="Bánh Mì & Cà Phê" data-en="Bánh Mì & Cà Phê" data-vi="Bánh Mì & Cà Phê">Bánh Mì & Cà Phê</p>
-            </div>
-            <div class="footer-section">
-                <h4 data-es="Enlaces Rápidos" data-en="Quick Links" data-vi="Liên kết nhanh">Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="index.html" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
-                    <li><a href="story.html" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
-                    <li><a href="gallery.html" data-es="Galería" data-en="Gallery" data-vi="Thư viện">Galería</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4 data-es="Síguenos" data-en="Follow Us" data-vi="Theo dõi chúng tôi">Síguenos</h4>
-                <div class="social-links">
-                    <a href="#" class="social-link">Instagram</a>
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">TikTok</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p data-es="© 2026 B'My Vietnam. Hecho con ❤️ en Madrid." data-en="© 2026 B'My Vietnam. Made with ❤️ in Madrid." data-vi="© 2026 B'My Vietnam. Được thực hiện bằng ❤️ ở Madrid.">© 2026 B'My Vietnam. Hecho con ❤️ en Madrid.</p>
-        </div>
-    </footer>
-
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

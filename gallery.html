@@ -1,412 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería - B'My Bánh Mì & Cà Phê</title>
-    <link rel="icon" type="image/svg+xml" href="assets/logo-red.svg">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F2EVGFPTL9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F2EVGFPTL9');
-    </script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Afacad:wght@400;600&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#ee3124" />
+<meta name="description" content="Galería B'My: bánh mì, cà phê, cocina, mostrador, momentos compartidos en Chamberí." />
+<title>Galería · B'My Bánh Mì & Cà Phê</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo-red.svg" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F2EVGFPTL9"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-F2EVGFPTL9');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Afacad:wght@400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-        <button class="lang-btn active" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="vi">VI</button>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html"><img src="assets/logo-red.svg" alt="B'My"><span class="wordmark">B'my</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
+      <li><a href="menu.html" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
+      <li><a href="story.html" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
+      <li><a href="gallery.html" class="active" data-es="Galería" data-en="Gallery" data-vi="Bộ sưu tập">Galería</a></li>
+      <li><a href="contact.html" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher"><button data-lang="es" class="active">ES</button><button data-lang="en">EN</button><button data-lang="vi">VI</button></div>
+      <button class="nav-toggle" aria-label="Menú" id="navToggle">☰</button>
     </div>
+  </div>
+</nav>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo-wrapper">
-                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" fill="#ee3124"/>
-                    <text x="50" y="65" font-size="60" font-weight="bold" text-anchor="middle" fill="white" font-family="Oswald">B</text>
-                </svg>
-                <span class="brand-name">B'My</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
-                <li><a href="menu.html" class="nav-link" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
-                <li><a href="story.html" class="nav-link" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
-                <li><a href="gallery.html" class="nav-link active" data-es="Galería" data-en="Gallery" data-vi="Thư viện">Galería</a></li>
-                <li><a href="contact.html" class="nav-link" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow" style="color:var(--yellow)" data-es="Galería" data-en="Gallery" data-vi="Bộ sưu tập">Galería</span>
+    <h1 data-es="Visita Vietnam" data-en="Visit Vietnam" data-vi="Ghé Việt Nam">Visita Vietnam</h1>
+    <span class="script" data-es="desde Madrid" data-en="from Madrid" data-vi="từ Madrid">desde Madrid</span>
+    <p data-es="Cada bánh mì, cada cà phê, cada esquina del local — un pedazo de Hà Nội, Sài Gòn y Đà Lạt en una calle de Chamberí." data-en="Every bánh mì, every cà phê, every corner of the store — a piece of Hà Nội, Sài Gòn and Đà Lạt on a Chamberí street." data-vi="Mỗi bánh mì, mỗi cà phê, mỗi góc cửa hàng — một mảnh Hà Nội, Sài Gòn, Đà Lạt giữa Chamberí.">Cada bánh mì, cada cà phê, cada esquina del local — un pedazo de Hà Nội, Sài Gòn y Đà Lạt en una calle de Chamberí.</p>
+  </div>
+</section>
 
-    <!-- Mascot Corner -->
-    <div class="mascot-container">
-        <div class="mascot-character">🍞</div>
+<section style="background:var(--cream);">
+  <div class="container">
+    <div class="gallery-page">
+      <figure><img src="assets/photos/banhmi-editorial.jpg" alt="Bánh mì editorial moody" loading="lazy"></figure>
+      <figure><img src="assets/photos/banhmi-closeup.jpg" alt="Close-up bánh mì abierto" loading="lazy"></figure>
+      <figure><img src="assets/photos/bmy-store.jpg" alt="Fachada B'My en Madrid" loading="lazy"></figure>
+      <figure><img src="assets/photos/kitchen-topdown.jpg" alt="Cocina vista cenital" loading="lazy"></figure>
+      <figure><img src="assets/photos/banhmi-hero.jpg" alt="Bánh mì hero shot" loading="lazy"></figure>
+      <figure><img src="assets/photos/bmy-packaging.jpg" alt="Packaging B'My" loading="lazy"></figure>
+      <figure><img src="assets/photos/banhmi-wood.jpg" alt="Bánh mì sobre madera" loading="lazy"></figure>
+      <figure><img src="assets/photos/street-friends.jpg" alt="Amigas con bánh mì en bolsas kraft" loading="lazy"></figure>
+      <figure><img src="assets/photos/banhmi-basket.jpg" alt="Bánh mì en cesta de mimbre" loading="lazy"></figure>
+      <figure><img src="assets/photos/caphe-watercolor.jpg" alt="Cà phê acuarela" loading="lazy"></figure>
+      <figure><img src="assets/photos/illustration-stool.jpg" alt="Bánh mì y cà phê en taburete rojo" loading="lazy"></figure>
+      <figure><img src="assets/photos/banhmi-hero2.jpg" alt="Bánh mì hero alt" loading="lazy"></figure>
+      <figure><img src="assets/photos/bmy-team.jpg" alt="Equipo B'My" loading="lazy"></figure>
+      <figure><img src="assets/photos/bmy-shop.jpg" alt="Local B'My" loading="lazy"></figure>
+      <figure><img src="assets/photos/banhmi-illustration.jpg" alt="Ilustración bánh mì" loading="lazy"></figure>
     </div>
+  </div>
+</section>
 
-    <!-- Gallery Hero -->
-    <section class="gallery-hero">
-        <h1 data-es="Galería" data-en="Gallery" data-vi="Thư viện">Galería</h1>
-        <p data-es="Visualiza el mundo de B'My" data-en="Visualize the world of B'My" data-vi="Hình dung thế giới của B'My">Visualiza el mundo de B'My</p>
-        <div class="street-pattern"></div>
-    </section>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="wordmark">B'my</div><p data-es="Specialty bánh mì y cà phê vietnamita en Madrid. Sabor real, esencia de Vietnam." data-en="Specialty Vietnamese banh mi and ca phe in Madrid. Real flavor, essence of Vietnam." data-vi="Bánh mì và cà phê Việt chuyên biệt tại Madrid. Hương vị thật, tinh hoa Việt.">Specialty bánh mì y cà phê vietnamita en Madrid. Sabor real, esencia de Vietnam.</p></div>
+      <div><h5>Explora</h5><ul><li><a href="menu.html">Menú</a></li><li><a href="story.html">Historia</a></li><li><a href="gallery.html">Galería</a></li><li><a href="contact.html">Contacto</a></li></ul></div>
+      <div><h5>Visítanos</h5><ul><li>C/ Fernández de los Ríos, 106</li><li>Chamberí · 28015 Madrid</li><li><a href="mailto:hola@bmy.es">hola@bmy.es</a></li><li><a href="https://wa.me/34604110755" target="_blank" rel="noopener">+34 604 110 755</a></li></ul></div>
+      <div><h5>Síguenos</h5><div class="footer-social"><a href="https://instagram.com/bmy.madrid" target="_blank" rel="noopener" aria-label="Instagram">IG</a><a href="https://tiktok.com/@bmy.madrid" target="_blank" rel="noopener" aria-label="TikTok">TT</a><a href="https://facebook.com/bmy.madrid" target="_blank" rel="noopener" aria-label="Facebook">FB</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 B'My. Madrid, España.</span><span>★ Apertura 26 · 05 · 2026 ★</span></div>
+  </div>
+</footer>
 
-    <!-- Gallery Categories -->
-    <section class="gallery-section">
-        <div class="gallery-tabs">
-            <button class="gallery-tab active" data-category="food">
-                <span class="tab-icon">🍜</span>
-                <span data-es="Comida" data-en="Food" data-vi="Thức ăn">Comida</span>
-            </button>
-            <button class="gallery-tab" data-category="drinks">
-                <span class="tab-icon">☕</span>
-                <span data-es="Bebidas" data-en="Drinks" data-vi="Đồ uống">Bebidas</span>
-            </button>
-            <button class="gallery-tab" data-category="space">
-                <span class="tab-icon">🏠</span>
-                <span data-es="Espacio" data-en="Space" data-vi="Không gian">Espacio</span>
-            </button>
-            <button class="gallery-tab" data-category="team">
-                <span class="tab-icon">👥</span>
-                <span data-es="Equipo" data-en="Team" data-vi="Đội">Equipo</span>
-            </button>
-        </div>
+<a class="fab-whatsapp" href="https://wa.me/34604110755" target="_blank" rel="noopener" aria-label="WhatsApp B'my">W</a>
 
-        <!-- Food Gallery -->
-        <div class="gallery-container active" data-category="food">
-            <h2 class="gallery-title">🍜 <span data-es="Nuestra Comida" data-en="Our Food" data-vi="Thức ăn của chúng tôi">Nuestra Comida</span></h2>
-            <p class="gallery-description" data-es="Cada plato es una obra de arte culinaria. Fotografia que inspira apetito." data-en="Each dish is a culinary work of art. Photography that inspires hunger." data-vi="Mỗi dish là một tác phẩm nghệ thuật ẩm thực. Nhiếp ảnh gây cảm hứng crave.">Cada plato es una obra de arte culinaria. Fotografia que inspira apetito.</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ee3124, #ffea82);">
-                    <div class="gallery-image">🥖</div>
-                    <div class="gallery-overlay">
-                        <p>Bánh Mì Xíu Mại</p>
-                        <span>Clásico Vietnamita</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #426ab3, #D9F2FF);">
-                    <div class="gallery-image">🥘</div>
-                    <div class="gallery-overlay">
-                        <p>Heo Quay</p>
-                        <span>Cerdo Asado</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #e8712a, #ffea82);">
-                    <div class="gallery-image">🍗</div>
-                    <div class="gallery-overlay">
-                        <p>Gà Xé</p>
-                        <span>Pollo Desmenuzado</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #1a3a6e, #43CB00);">
-                    <div class="gallery-image">🥗</div>
-                    <div class="gallery-overlay">
-                        <p>Ensaladas Frescas</p>
-                        <span>Verduras Crudas</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #531313, #e8712a);">
-                    <div class="gallery-image">🌮</div>
-                    <div class="gallery-overlay">
-                        <p>Combinaciones Gourmet</p>
-                        <span>Edición Limitada</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ffea82, #ee3124);">
-                    <div class="gallery-image">🍲</div>
-                    <div class="gallery-overlay">
-                        <p>Sopas Aromáticas</p>
-                        <span>Calor Vietnamita</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #43CB00, #426ab3);">
-                    <div class="gallery-image">🍱</div>
-                    <div class="gallery-overlay">
-                        <p>Presentación Premium</p>
-                        <span>Platos Especiales</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #D9F2FF, #1a3a6e);">
-                    <div class="gallery-image">🥢</div>
-                    <div class="gallery-overlay">
-                        <p>Experiencia Auténtica</p>
-                        <span>Desde Vietnam</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Drinks Gallery -->
-        <div class="gallery-container" data-category="drinks">
-            <h2 class="gallery-title">☕ <span data-es="Bebidas" data-en="Drinks" data-vi="Đồ uống">Bebidas</span></h2>
-            <p class="gallery-description" data-es="Desde café tradicional hasta matcha moderno. Cada sorbo es una experiencia." data-en="From traditional coffee to modern matcha. Every sip is an experience." data-vi="Từ cà phê truyền thống đến matcha hiện đại. Mỗi nhấp là một trải nghiệm.">Desde café tradicional hasta matcha moderno. Cada sorbo es una experiencia.</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" style="background: linear-gradient(135deg, #531313, #e8712a);">
-                    <div class="gallery-image">☕</div>
-                    <div class="gallery-overlay">
-                        <p>Cà Phê Sài Gòn</p>
-                        <span>Espresso Vietnamita</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #426ab3, #ffea82);">
-                    <div class="gallery-image">🍵</div>
-                    <div class="gallery-overlay">
-                        <p>Matcha Latte</p>
-                        <span>Verde Premium</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ee3124, #D9F2FF);">
-                    <div class="gallery-image">🧊</div>
-                    <div class="gallery-overlay">
-                        <p>Cold Brew</p>
-                        <span>Frío Concentrado</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ffea82, #43CB00);">
-                    <div class="gallery-image">🥤</div>
-                    <div class="gallery-overlay">
-                        <p>Bebidas Frescas</p>
-                        <span>Zumos Naturales</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #1a3a6e, #e8712a);">
-                    <div class="gallery-image">🍨</div>
-                    <div class="gallery-overlay">
-                        <p>Yogur Cremoso</p>
-                        <span>Saludable y Suave</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #D9F2FF, #426ab3);">
-                    <div class="gallery-image">🍹</div>
-                    <div class="gallery-overlay">
-                        <p>Bebidas Innovadoras</p>
-                        <span>Fusión de Sabores</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #43CB00, #531313);">
-                    <div class="gallery-image">🫖</div>
-                    <div class="gallery-overlay">
-                        <p>Tés Especiales</p>
-                        <span>Tradición Vietnamita</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #e8712a, #ee3124);">
-                    <div class="gallery-image">☕</div>
-                    <div class="gallery-overlay">
-                        <p>Café Artesanal</p>
-                        <span>Hecho con Amor</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Space Gallery -->
-        <div class="gallery-container" data-category="space">
-            <h2 class="gallery-title">🏠 <span data-es="Nuestro Espacio" data-en="Our Space" data-vi="Không gian của chúng tôi">Nuestro Espacio</span></h2>
-            <p class="gallery-description" data-es="Industrial Modernismo con Herencia Orgánica. Un eatery urbano donde Vietnam vive en cada rincón." data-en="Industrial Modernism with Organic Heritage. An urban eatery where Vietnam lives in every corner." data-vi="Chủ nghĩa hiện đại công nghiệp với di sản hữu cơ. Một quán ăn đô thị nơi Việt Nam sống ở mọi góc.">Industrial Modernismo con Herencia Orgánica. Un eatery urbano donde Vietnam vive en cada rincón.</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" style="background: linear-gradient(135deg, #1a3a6e, #531313);">
-                    <div class="gallery-image">🏪</div>
-                    <div class="gallery-overlay">
-                        <p>Entrada Principal</p>
-                        <span>Bienvenida al Mundo</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #426ab3, #ee3124);">
-                    <div class="gallery-image">🪑</div>
-                    <div class="gallery-overlay">
-                        <p>Área de Comedor</p>
-                        <span>Cómodo y Acogedor</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #e8712a, #ffea82);">
-                    <div class="gallery-image">🎨</div>
-                    <div class="gallery-overlay">
-                        <p>Arte Vietnamita</p>
-                        <span>Paredes Coloridas</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #43CB00, #D9F2FF);">
-                    <div class="gallery-image">💡</div>
-                    <div class="gallery-overlay">
-                        <p>Iluminación Moderna</p>
-                        <span>Atmósfera Vibrante</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ffea82, #426ab3);">
-                    <div class="gallery-image">🌿</div>
-                    <div class="gallery-overlay">
-                        <p>Plantas Verdes</p>
-                        <span>Naturaleza Interior</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #D9F2FF, #e8712a);">
-                    <div class="gallery-image">🏡</div>
-                    <div class="gallery-overlay">
-                        <p>Espacio Íntimo</p>
-                        <span>Para Grupos</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #531313, #43CB00);">
-                    <div class="gallery-image">🪟</div>
-                    <div class="gallery-overlay">
-                        <p>Ventanas Grandes</p>
-                        <span>Luz Natural</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ee3124, #1a3a6e);">
-                    <div class="gallery-image">🎭</div>
-                    <div class="gallery-overlay">
-                        <p>Decoración Única</p>
-                        <span>Identidad B'My</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Team Gallery -->
-        <div class="gallery-container" data-category="team">
-            <h2 class="gallery-title">👥 <span data-es="Nuestro Equipo" data-en="Our Team" data-vi="Đội của chúng tôi">Nuestro Equipo</span></h2>
-            <p class="gallery-description" data-es="Personas apasionadas de Vietnam, Madrid y el mundo. Juntos creamos magia culinaria." data-en="Passionate people from Vietnam, Madrid and the world. Together we create culinary magic." data-vi="Những người đam mê từ Việt Nam, Madrid và thế giới. Cùng nhau chúng tôi tạo ra phép thuật ẩm thực.">Personas apasionadas de Vietnam, Madrid y el mundo. Juntos creamos magia culinaria.</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ee3124, #ffea82);">
-                    <div class="gallery-image">👨‍🍳</div>
-                    <div class="gallery-overlay">
-                        <p>Tony Nguyen</p>
-                        <span>Jefe de Cocina</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #426ab3, #D9F2FF);">
-                    <div class="gallery-image">👨‍💼</div>
-                    <div class="gallery-overlay">
-                        <p>Danny Martinez</p>
-                        <span>Fundador & Visión</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #e8712a, #ee3124);">
-                    <div class="gallery-image">👩‍🍳</div>
-                    <div class="gallery-overlay">
-                        <p>Chefs Talentosos</p>
-                        <span>Magia en la Cocina</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #43CB00, #1a3a6e);">
-                    <div class="gallery-image">👨‍🔧</div>
-                    <div class="gallery-overlay">
-                        <p>Baristas Expertos</p>
-                        <span>Café Perfecto</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ffea82, #426ab3);">
-                    <div class="gallery-image">👩‍💼</div>
-                    <div class="gallery-overlay">
-                        <p>Gerentes Dedicados</p>
-                        <span>Atención al Cliente</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #D9F2FF, #e8712a);">
-                    <div class="gallery-image">👨‍🍳</div>
-                    <div class="gallery-overlay">
-                        <p>Cocineros de Apoyo</p>
-                        <span>Equipo Unido</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #531313, #43CB00);">
-                    <div class="gallery-image">👩‍🍳</div>
-                    <div class="gallery-overlay">
-                        <p>Pasión Compartida</p>
-                        <span>Misión Común</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item" style="background: linear-gradient(135deg, #ee3124, #1a3a6e);">
-                    <div class="gallery-image">👥</div>
-                    <div class="gallery-overlay">
-                        <p>¡Familia B'My!</p>
-                        <span>Somos Uno</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Instagram CTA -->
-    <section class="instagram-cta">
-        <h2 data-es="Más en Redes Sociales" data-en="More on Social Media" data-vi="Thêm trên Mạng xã hội">Más en Redes Sociales</h2>
-        <p data-es="Síguenos en Instagram para actualizaciones diarias sobre eventos, platos especiales y momentos B'My." data-en="Follow us on Instagram for daily updates on events, special dishes and B'My moments." data-vi="Theo dõi chúng tôi trên Instagram để cập nhật hàng ngày về các sự kiện, các món ăn đặc biệt.">Síguenos en Instagram para actualizaciones diarias sobre eventos, platos especiales y momentos B'My.</p>
-        <a href="#" class="btn btn-primary">@BMYVietnam</a>
-        <div class="street-pattern"></div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>B'My</h4>
-                <p data-es="Bánh Mì & Cà Phê" data-en="Bánh Mì & Cà Phê" data-vi="Bánh Mì & Cà Phê">Bánh Mì & Cà Phê</p>
-            </div>
-            <div class="footer-section">
-                <h4 data-es="Enlaces Rápidos" data-en="Quick Links" data-vi="Liên kết nhanh">Enlaces Rápidos</h4>
-                <ul>
-                    <li><a href="index.html" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
-                    <li><a href="menu.html" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
-                    <li><a href="story.html" data-es="Historia" data-en="Story" data-vi="Câu chuyện">Historia</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4 data-es="Síguenos" data-en="Follow Us" data-vi="Theo dõi chúng tôi">Síguenos</h4>
-                <div class="social-links">
-                    <a href="#" class="social-link">Instagram</a>
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">TikTok</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p data-es="© 2026 B'My Vietnam. Hecho con ❤️ en Madrid." data-en="© 2026 B'My Vietnam. Made with ❤️ in Madrid." data-vi="© 2026 B'My Vietnam. Được thực hiện bằng ❤️ ở Madrid.">© 2026 B'My Vietnam. Hecho con ❤️ en Madrid.</p>
-        </div>
-    </footer>
-
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
