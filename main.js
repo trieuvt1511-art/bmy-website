@@ -112,11 +112,11 @@ function updateCountdownLabels(lang) {
 }
 
 // ========================================
-// COUNTDOWN TIMER - May 1, 2026
+// COUNTDOWN TIMER - May 26, 2026
 // ========================================
 function initCountdown() {
     // Madrid timezone
-    const launchDate = new Date('2026-05-01T00:00:00+02:00').getTime();
+    const launchDate = new Date('2026-05-26T11:00:00+02:00').getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -127,7 +127,7 @@ function initCountdown() {
             if (countdownContainer) {
                 countdownContainer.innerHTML = `
                     <h2 style="color: #ee3124; text-align: center; width: 100%; font-family: 'Oswald', sans-serif; font-size: 2rem; margin: 0;">
-                        ¡Ahora estamos abiertos!<br>Visítanos en C/Preguntoiro 29, Madrid.
+                        ¡Ahora estamos abiertos!<br>Visítanos en C/ Fernández de los Ríos, 106, Madrid.
                     </h2>
                 `;
             }
@@ -465,7 +465,7 @@ function initTestimonialsCarousel() {
 // INITIALIZE ALL FEATURES
 // ========================================
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('B\'My Website Loaded - May 1, 2026 Opening');
+    console.log('B\'My Website Loaded - May 26, 2026 Opening');
 
     // Initialize features
     initLanguageSwitcher();
