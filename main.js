@@ -188,6 +188,82 @@
   }
 
   // -----------------------------------------------------------------
+  // COOKIE BANNER (GDPR/LSSI-CE compliant)
+  // -----------------------------------------------------------------
+  const COOKIE_KEY = 'bmy_cookie_consent';
+  function getConsent() { try { return localStorage.getItem(COOKIE_KEY); } catch(e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(COOKIE_KEY, v); } catch(e) {} }
+
+  function loadGA4() {
+    if (window._ga4Loaded) return;
+    window._ga4Loaded = true;
+    const s = document.createElement('script');
+    s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-F2EVGFPTL9';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-F2EVGFPTL9', { anonymize_ip: true });
+  }
+
+  function initCookieBanner() {
+    const consent = getConsent();
+    if (consent === 'accepted') { loadGA4(); return; }
+    if (consent === 'rejected') return;
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'dialog');
+    banner.setAttribute('aria-label', 'Cookie consent');
+    banner.innerHTML = `
+      <div class="cookie-banner-inner">
+        <p data-es="Usamos cookies para analizar el tráfico (Google Analytics) y mejorar tu experiencia. Lee nuestra <a href='cookies.html'>política de cookies</a> y <a href='privacy.html'>privacidad</a>."
+           data-en="We use cookies to analyze traffic (Google Analytics) and improve your experience. Read our <a href='cookies.html'>cookie policy</a> and <a href='privacy.html'>privacy policy</a>."
+           data-vi="Chúng tôi dùng cookies để phân tích truy cập (Google Analytics) và cải thiện trải nghiệm. Đọc <a href='cookies.html'>chính sách cookies</a> và <a href='privacy.html'>bảo mật</a>.">
+          Usamos cookies para analizar el tráfico (Google Analytics) y mejorar tu experiencia. Lee nuestra <a href="cookies.html">política de cookies</a> y <a href="privacy.html">privacidad</a>.
+        </p>
+        <div class="actions">
+          <button class="btn btn-outline" id="cookie-reject" data-es="Rechazar" data-en="Reject" data-vi="Từ chối">Rechazar</button>
+          <button class="btn btn-primary" id="cookie-accept" data-es="Aceptar" data-en="Accept" data-vi="Đồng ý">Aceptar</button>
+        </div>
+      </div>`;
+    document.body.appendChild(banner);
+    requestAnimationFrame(() => banner.classList.add('is-visible'));
+    // Re-apply current lang to banner
+    const curLang = (function(){ try { return localStorage.getItem(LANG_KEY) || 'es'; } catch(e) { return 'es'; } })();
+    banner.querySelectorAll('[data-es]').forEach(el => {
+      const v = el.dataset[curLang === 'es' ? 'es' : curLang === 'en' ? 'en' : 'vi'];
+      if (v) el.innerHTML = v;
+    });
+
+    document.getElementById('cookie-accept').addEventListener('click', () => {
+      setConsent('accepted'); loadGA4();
+      banner.classList.remove('is-visible'); setTimeout(() => banner.remove(), 400);
+    });
+    document.getElementById('cookie-reject').addEventListener('click', () => {
+      setConsent('rejected');
+      banner.classList.remove('is-visible'); setTimeout(() => banner.remove(), 400);
+    });
+  }
+
+  // -----------------------------------------------------------------
+  // WHATSAPP I18N — đổi prefilled text theo ngôn ngữ
+  // -----------------------------------------------------------------
+  const WA_MESSAGES = {
+    es: "Hola B'my 👋 quiero saber más sobre vuestro menú",
+    en: "Hi B'my 👋 I'd love to know more about your menu",
+    vi: "Chào B'my 👋 mình muốn biết thêm về menu"
+  };
+  function updateWhatsAppLinks() {
+    const lang = (function(){ try { return localStorage.getItem(LANG_KEY) || 'es'; } catch(e){ return 'es'; } })();
+    const text = encodeURIComponent(WA_MESSAGES[lang] || WA_MESSAGES.es);
+    document.querySelectorAll('a[href*="wa.me/34604110755"]').forEach(a => {
+      const base = a.getAttribute('href').split('?')[0];
+      a.setAttribute('href', `${base}?text=${text}`);
+    });
+  }
+
+  // -----------------------------------------------------------------
   // INIT
   // -----------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -198,6 +274,12 @@
     initReveal();
     initMenuTabs();
     initNewsletter();
+    initCookieBanner();
+    updateWhatsAppLinks();
+    // Refresh WA links when language changes
+    document.querySelectorAll('.lang-switcher button').forEach(btn => {
+      btn.addEventListener('click', () => setTimeout(updateWhatsAppLinks, 50));
+    });
     console.log("B'My Website Loaded — Opening 26 May 2026");
   });
 })();

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#ee3124" />
+<meta name="robots" content="noindex,follow" />
+<title>404 · Página no encontrada · B'My</title>
+<link rel="icon" type="image/svg+xml" href="assets/logo-red.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Afacad:wght@400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+<style>
+.err-wrap { min-height: 70vh; display: grid; place-items: center; padding: 60px 20px; text-align: center; background: linear-gradient(135deg, var(--yellow) 0%, var(--pink) 50%, var(--teal) 100%); }
+.err-wrap .num { font-family: var(--font-display); font-size: clamp(120px, 22vw, 240px); line-height: 1; color: var(--red); margin: 0; letter-spacing: -.02em; }
+.err-wrap h1 { color: var(--ink); margin: 0 0 8px; }
+.err-wrap .script { color: var(--red); font-size: clamp(28px, 4vw, 44px); display: block; }
+.err-wrap p { max-width: 50ch; margin: 18px auto 32px; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="/"><img src="assets/logo-red.svg" alt="B'My"><span class="wordmark">B'my</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/" data-es="Inicio" data-en="Home" data-vi="Trang chủ">Inicio</a></li>
+      <li><a href="menu.html" data-es="Menú" data-en="Menu" data-vi="Thực đơn">Menú</a></li>
+      <li><a href="contact.html" data-es="Contacto" data-en="Contact" data-vi="Liên hệ">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="err-wrap">
+  <div class="container">
+    <p class="num">404</p>
+    <h1 data-es="Página no encontrada" data-en="Page not found" data-vi="Không tìm thấy trang">Página no encontrada</h1>
+    <span class="script" data-es="pero el bánh mì sí" data-en="but the bánh mì is here" data-vi="nhưng bánh mì có đây">pero el bánh mì sí</span>
+    <p data-es="No encontramos lo que buscas — pero seguimos preparando bánh mì recién hecho en Chamberí. ¿Te llevamos a la página principal?" data-en="We couldn't find what you were looking for — but we're still making fresh bánh mì in Chamberí. Take you home?" data-vi="Không tìm thấy trang bạn cần — nhưng bánh mì vẫn nóng giòn ở Chamberí. Quay về trang chủ nhé?">No encontramos lo que buscas — pero seguimos preparando bánh mì recién hecho en Chamberí. ¿Te llevamos a la página principal?</p>
+    <a class="btn btn-primary" href="/" data-es="Volver al inicio" data-en="Back home" data-vi="Về trang chủ">Volver al inicio</a>
+  </div>
+</section>
+
+<script src="main.js"></script>
+</body>
+</html>
