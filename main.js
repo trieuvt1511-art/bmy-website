@@ -264,6 +264,35 @@
   }
 
   // -----------------------------------------------------------------
+  // RESERVATION FORM → WhatsApp
+  // -----------------------------------------------------------------
+  function initReservationForm() {
+    const form = document.getElementById('reservationForm');
+    if (!form || !form.querySelector('[name="nombre"]')) return;
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const get = n => (form.querySelector(`[name="${n}"]`) || {}).value || '';
+      const lang = (function(){ try { return localStorage.getItem(LANG_KEY) || 'es'; } catch(e){ return 'es'; } })();
+      const L = {
+        es: { t: 'NUEVA RESERVA · B\'my', name: 'Nombre', email: 'Email', tel: 'Teléfono', ppl: 'Personas', date: 'Fecha', time: 'Hora', msg: 'Mensaje' },
+        en: { t: 'NEW RESERVATION · B\'my', name: 'Name', email: 'Email', tel: 'Phone', ppl: 'Guests', date: 'Date', time: 'Time', msg: 'Message' },
+        vi: { t: 'ĐẶT BÀN MỚI · B\'my', name: 'Tên', email: 'Email', tel: 'ĐT', ppl: 'Số người', date: 'Ngày', time: 'Giờ', msg: 'Ghi chú' }
+      }[lang] || {};
+      let msg = `*${L.t}*\n\n`;
+      msg += `${L.name}: ${get('nombre')}\n`;
+      msg += `${L.email}: ${get('email')}\n`;
+      msg += `${L.tel}: ${get('telefono')}\n`;
+      msg += `${L.ppl}: ${get('personas')}\n`;
+      msg += `${L.date}: ${get('fecha')}\n`;
+      msg += `${L.time}: ${get('hora')}\n`;
+      const extra = get('mensaje');
+      if (extra) msg += `${L.msg}: ${extra}\n`;
+      window.open(`https://wa.me/34604110755?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+  }
+
+  // -----------------------------------------------------------------
   // INIT
   // -----------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -274,6 +303,7 @@
     initReveal();
     initMenuTabs();
     initNewsletter();
+    initReservationForm();
     initCookieBanner();
     updateWhatsAppLinks();
     // Refresh WA links when language changes

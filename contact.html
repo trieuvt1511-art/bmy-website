@@ -88,25 +88,25 @@
       <h2 data-es="Reservar tu mesa" data-en="Reserve your table" data-vi="Đặt bàn">Reservar tu mesa</h2>
       <p class="lead" data-es="Queremos asegurar que tengas la mejor experiencia. Reserva con anticipación." data-en="We want you to have the best experience. Reserve in advance." data-vi="Chúng tôi muốn bạn có trải nghiệm tốt nhất. Đặt trước.">Queremos asegurar que tengas la mejor experiencia. Reserva con anticipación.</p>
 
-      <form id="reservationForm" onsubmit="event.preventDefault(); alert('Gracias! Te contactaremos por WhatsApp en 24h.');">
+      <form id="reservationForm">
         <div class="form-row">
           <div class="form-group">
             <label data-es="Nombre" data-en="Name" data-vi="Tên">Nombre *</label>
-            <input type="text" required placeholder="Tu nombre completo">
+            <input type="text" name="nombre" required placeholder="Tu nombre completo">
           </div>
           <div class="form-group">
             <label data-es="Email" data-en="Email" data-vi="Email">Email *</label>
-            <input type="email" required placeholder="tu@email.com">
+            <input type="email" name="email" required placeholder="tu@email.com">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label data-es="Teléfono / WhatsApp" data-en="Phone / WhatsApp" data-vi="ĐT / WhatsApp">Teléfono *</label>
-            <input type="tel" required placeholder="+34 XXX XXX XXX">
+            <input type="tel" name="telefono" required placeholder="+34 XXX XXX XXX">
           </div>
           <div class="form-group">
             <label data-es="Personas" data-en="People" data-vi="Số người">Personas *</label>
-            <select required>
+            <select name="personas" required>
               <option>1 persona</option><option>2 personas</option><option>3 personas</option><option>4 personas</option><option>5–6 personas</option><option>7–8 personas</option>
             </select>
           </div>
@@ -114,18 +114,19 @@
         <div class="form-row">
           <div class="form-group">
             <label data-es="Fecha" data-en="Date" data-vi="Ngày">Fecha *</label>
-            <input type="date" required min="2026-05-26">
+            <input type="date" name="fecha" required min="2026-05-26">
           </div>
           <div class="form-group">
             <label data-es="Hora" data-en="Time" data-vi="Giờ">Hora *</label>
-            <input type="time" required>
+            <input type="time" name="hora" required>
           </div>
         </div>
         <div class="form-group" style="margin-bottom:24px;">
           <label data-es="Mensaje (opcional)" data-en="Message (optional)" data-vi="Tin nhắn (không bắt buộc)">Mensaje</label>
-          <textarea placeholder="Alergias, ocasión especial, peticiones..."></textarea>
+          <textarea name="mensaje" placeholder="Alergias, ocasión especial, peticiones..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" data-es="Confirmar reserva" data-en="Confirm reservation" data-vi="Xác nhận đặt bàn">Confirmar reserva</button>
+        <button type="submit" class="btn btn-primary" data-es="Reservar por WhatsApp" data-en="Reserve via WhatsApp" data-vi="Đặt bàn qua WhatsApp">Reservar por WhatsApp</button>
+        <p class="form-hint" data-es="Al pulsar, se abrirá WhatsApp con tu reserva lista para enviar. Te confirmamos en menos de 24h." data-en="On submit, WhatsApp opens with your reservation ready to send. We confirm within 24h." data-vi="Khi gửi, WhatsApp sẽ mở với thông tin đặt bàn sẵn sàng. Xác nhận trong 24h.">Al pulsar, se abrirá WhatsApp con tu reserva lista para enviar. Te confirmamos en menos de 24h.</p>
       </form>
     </div>
   </div>

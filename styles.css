@@ -403,6 +403,23 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 .menu-item-body .price { font-family: var(--font-display); font-size: 22px; color: var(--red); font-weight: 700; }
 .menu-item-body p { color: var(--ink-soft); font-size: 15px; margin: 0; flex: 1; }
 
+/* ===== Allergen notice ===== */
+.allergen-notice {
+  margin-top: 48px;
+  background: var(--white);
+  border-left: 5px solid var(--yellow);
+  border-radius: var(--radius-sm);
+  padding: 28px 32px;
+  box-shadow: var(--shadow-card);
+}
+.allergen-notice h3 {
+  font-size: 18px; color: var(--ink); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.allergen-notice h3::before { content: "⚠️"; font-size: 20px; }
+.allergen-notice p { color: var(--ink-soft); font-size: 15px; margin: 0 0 10px; }
+.allergen-notice .allergen-cta { font-weight: 600; color: var(--ink); margin-bottom: 0; }
+
 /* ===== Story page ===== */
 .page-hero {
   background: linear-gradient(135deg, var(--yellow) 0%, var(--pink) 50%, var(--teal) 100%);
@@ -483,6 +500,7 @@ section { padding: clamp(60px, 9vw, 120px) 0; }
 }
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--red); }
 .form-group textarea { min-height: 120px; resize: vertical; }
+.form-hint { margin: 14px 0 0; font-size: 13px; color: var(--ink-soft); }
 
 /* ===== Decorative dividers ===== */
 .divider {
